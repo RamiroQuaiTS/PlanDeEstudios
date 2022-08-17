@@ -1,0 +1,24 @@
+Referencia : https://www.youtube.com/watch?v=7-JHoPyJy-Q
+
+Solución y hacer reversos de commit
+
+hay 3 estados 
+1. working directory - archivos fuera de git
+2. staging area - Archios listos para hacer comit
+3. repository - Archivos ya en git
+
+-- Eliminar cambios que no se querian subir y dejarlo como estaba
+git checkout {NombreDelArchivo}
+
+-- Agregar un cambio a un commit ya realizado
+git add {nombre del archivo}
+git commit --amend
+-- Con esto se puede modificar el mensaje que se metio en el 1er commit
+
+-- Copiar un commit de una branch o rama, hacia otra branch o rama por ejemplo de la master a NuevaRama
+-Para esto hay que identificar el commit hash que es la cadena larga que se genera en el commit ej (a9fb66f2ep9......)
+git checkout NuevaRama
+git cherry-pick + hash del commit
+git cherry-pick a9fb66f2ep9......
+-Ahora, con esto solo se copio de la master a NuevaRama no se borro de la master para esto hay que ejecutar lo siguiente
+
