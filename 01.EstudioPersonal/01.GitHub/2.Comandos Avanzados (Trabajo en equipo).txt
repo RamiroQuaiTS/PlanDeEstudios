@@ -22,3 +22,6 @@ git cherry-pick + hash del commit
 git cherry-pick a9fb66f2ep9......
 -Ahora, con esto solo se copio de la master a NuevaRama no se borro de la master para esto hay que ejecutar lo siguiente
 
+--También se pueden hacer pullrequest, esto desde la pagina de github.com, hay mas pero para este caso vamos a usar esta
+--Depues de hacer un pullrequest se deberá de mandar el link a un compañero para que valide y con esto dar retro
+--Al confirmar se puede hacer un merge desde la misma pagina y terminar de hacer el push desde aquí mismo.
