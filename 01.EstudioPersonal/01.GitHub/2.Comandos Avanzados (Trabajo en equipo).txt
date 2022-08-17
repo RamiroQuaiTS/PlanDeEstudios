@@ -21,6 +21,12 @@ git checkout NuevaRama
 git cherry-pick + hash del commit
 git cherry-pick a9fb66f2ep9......
 -Ahora, con esto solo se copio de la master a NuevaRama no se borro de la master para esto hay que ejecutar lo siguiente
+git reset --soft + hash del commit - Solo lo deja en staging area antes del commit
+git reset + hash del cmmit - este es modo mix pero estos cambios los deja afuera del staging area o sea en el working directory
+git reset --hard + hash del commit - Esto los elimina de etodos lados solo los deja en una garbage que dura 1 mes aprox
+--Para ver este garbage hay que ejeucutar el siguiente comando
+git reflog -- historial completo con todo y los amends y se muestra el hash del commit para poder restauralo.
+
 
 --También se pueden hacer pullrequest, esto desde la pagina de github.com, hay mas pero para este caso vamos a usar esta
 --Depues de hacer un pullrequest se deberá de mandar el link a un compañero para que valide y con esto dar retro

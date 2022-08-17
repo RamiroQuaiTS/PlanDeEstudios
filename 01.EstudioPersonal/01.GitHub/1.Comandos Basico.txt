@@ -62,4 +62,5 @@ git push origin --delete NuevaRama
 Con esto no se borra de la master para esto hay que poner 
 git barnch -d NuevaRama
 
+Prueba de commit nuevo sobre commit con merge
 
