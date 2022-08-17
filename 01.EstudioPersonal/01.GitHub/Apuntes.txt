@@ -1,0 +1,65 @@
+Git es una repositorio distribuido esto quiere decir que todos tiene el codigo en su máquina
+Comandos :
+git init - para crear y para que git pueda manejar este repositorio crea un archivo .git
+vim .gitignore - genera un archivo gitignore y dentro de este se puede agregar todo lo que no se quiera subir a git
+	ejemplos
+		archivo.txt
+		*txt
+		carpeta/*
+vim "NombreArchivo"."Extension" - genera un archivo nuevo y abre en consola las linas para poder escribir
+git pull origin master - se trae la ultima versión del repositorio
+git add -A agrega todos los cambios que se hicieron
+git add "NombreArchivo"."Extension" solo deja listo este archiv para hacer commit
+git commit -m "Comentario" hace commit de lo subido y con -m se agrega comentario para poder identificara el cambio
+git push origin master - sube todo al repositrio a la nubee
+
+git log - se trae todo lo que se ha comiteado, para salir de este comando cuando hay muchos hay que tlequear q
+git log -n 3 se trae solo los 3 utlimos registros 
+
+para salir de la pantalla de vim es necesario presionar ESC luego :w para guardar y :q para cerrar y regresar al comando de git
+si se agrega :wq guardar y cierra
+
+Para agregar un nuevo repositorio hay que entrar a github.com y agregar el repositorio nuevo luego que se quiera agregar 
+algun cambio a este repositorio hay que ejecutar el comando siguiente, copiando antes la ruta del repositorio
+
+git remote add origin http://reposotiro/mirep/etc......../repo.git
+con esto nos ponemos en el repositorio debería de ser algo asi
+git remote add origin https://github.com/RamiroQuaiTS/ApuntesGit.git
+y para finalizar usar el comando 
+git push origin master
+
+Creación de Ramas (Branch)
+esto sirve para crear ramas antes de trabjar en la master para esto hay que crear una arama con el siguiente comando
+git branch NuevaRama {Aqui va el nombre de la rama en lugar de NuevaRama}
+y para trabjar en la nueva rama hay que poner
+git checkout NuevaRama
+
+para ver todas la ramas hay que poner git branch sin argumentos y se muestran todas
+git branch
+
+la forma de subir cambios es igual que trabajr en la branch master
+
+git add -A para agregar todo o git add {nombre del archivo}
+git commit -m "Agregar comentario"
+
+para preprar todos los cambios que se hicieron en esta rama hay que poner el siguiente comando
+git push -u origin NuevaRama
+Con git branch -a se ven todas las branch generadas 
+
+Ahora hay que unir lo de la branch nueva con la master hy para esto hay que poner los siguientes comandos
+Pasarnos a la rama master
+git checkout master
+git pull origin master - para aseguranos que tenemos la ultima versión 
+Para saber cuales barnch estan listas se pone 
+git branch --merged
+y para hacer el merge de la nueva rama hay que poner 
+git merge NuevaRama
+ya solo falta subir todo a la rama master
+git push origin master
+y como recomendiacion es bueno limpiar o eliminar las branch o ramas que ya fueron usadas para esto hay que poner los siguientes comandos
+
+git push origin --delete NuevaRama
+Con esto no se borra de la master para esto hay que poner 
+git barnch -d NuevaRama
+
+
