@@ -1,0 +1,16 @@
+url de video en youtube
+https://www.youtube.com/watch?v=tP42hCXf-Ro&t=2178s
+PAra qutar error de pwshell
+https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar
+
+Comandos
+para generar un nuevo proyecto desde una linea de comandos usar
+Desde la ruta donde se desea crear la aplicación de angular
+En caso de que haya un error usar el 2do link para solventarlo
+
+ng new {NombreAplicacion}
+
+Para ejecutar la aplicación y ver que se haya generado de forma correcta usar 
+sobre la ruta donde se creo la aplicación
+
+ng serve --open
