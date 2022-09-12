@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ListaCompras';
+  title = 'Esta es una lista de compras';
+  operaciones = 'Aquí se puede hacer la suma de dos numeros: ' ;
 }
