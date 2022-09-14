@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from 'src/app/Modelos/item';
+import { ItemService } from 'src/app/services/item.service';
+
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -8,33 +10,14 @@ import { Item } from 'src/app/Modelos/item';
 export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
+  total: number = 0;
 
-  constructor() { }
+  constructor(private itemServices:ItemService) { }
 
   ngOnInit(): void {   
-    this.items = [
-      {
-        id: 0,
-        titulo: "Manzana",
-        precio: 20,
-        cantidad: 2,
-        completado: false
-      },
-      {
-        id: 1,
-        titulo: "Pan",
-        precio: 28.70,
-        cantidad: 1,
-        completado: false
-      },
-      {
-        id: 2,
-        titulo: "Huevo",
-        precio: 89,
-        cantidad: 1,
-        completado: false
-      }
-    ]
+    //this.items = [];
+    this.items = this.itemServices.getItems();
+    this.obtenerTotal();
   
    /*
     this.items[0] = new Item(2, "Manzana", 65.98, 1, true);
@@ -46,5 +29,17 @@ export class ItemsComponent implements OnInit {
 
   borrarItem(item: Item){
     this.items = this.items.filter(x => x.id != item.id)
+    this.obtenerTotal();
+  }
+
+  onCheck(item:Item){
+    this.obtenerTotal();
+  }
+
+  obtenerTotal(){
+    this.total = this.items
+                .filter(x => !x.completado)
+                .map(x => x.cantidad * x.precio)
+                .reduce((acc, item) => acc += item , 0);
   }
 }

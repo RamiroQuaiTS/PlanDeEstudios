@@ -1,5 +1,9 @@
 <div>
+    <app-total mensaje = "El total es: " [totales]="total"></app-total>
     <app-item 
-        *ngFor="let item of items" [item] = "item" (borrarItem)="borrarItem($event)">
+        *ngFor="let item of items" 
+        [item] = "item" 
+        (borrarItem)="borrarItem($event)"
+        (toggleItem)="onCheck($event)">
     </app-item>
 </div>
