@@ -22,3 +22,11 @@ Pagina con información importante
 code . para abrir un proyecto estando en la carpeta del mismo desde el cmd 
 para ejecutar la aplicación desde cmd npm start y esperar algunos segundos en lo que se ejecuta y muestar la pagin
 desde localhost:4200
+
+PAra generar un nuevo componenete hay que poner el siguiente comando 
+ng g c components/addItem
+con esto se crea una nueva carpeta con la estructura de angular
+
+Para crear un servicio nuevo para poder ser hijo de algun padre en angular
+ng generate service services/item
+ng g s services/item
