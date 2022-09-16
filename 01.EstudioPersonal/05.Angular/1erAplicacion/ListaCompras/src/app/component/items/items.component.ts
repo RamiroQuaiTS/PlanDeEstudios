@@ -16,8 +16,11 @@ export class ItemsComponent implements OnInit {
 
   ngOnInit(): void {   
     //this.items = [];
-    this.items = this.itemServices.getItems();
-    this.obtenerTotal();
+    //this.items = this.itemServices.getItems();
+    this.itemServices.getItems().subscribe(data =>{
+      this.items = data;
+      this.obtenerTotal();
+    });
   
    /*
     this.items[0] = new Item(2, "Manzana", 65.98, 1, true);
@@ -29,10 +32,12 @@ export class ItemsComponent implements OnInit {
 
   borrarItem(item: Item){
     this.items = this.items.filter(x => x.id != item.id)
+    this.itemServices.delete(item).subscribe()
     this.obtenerTotal();
   }
 
   onCheck(item:Item){
+    this.itemServices.toggleItem(item).subscribe()
     this.obtenerTotal();
   }
 

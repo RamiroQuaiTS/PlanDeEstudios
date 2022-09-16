@@ -1,6 +1,12 @@
 .row{
+    box-sizing: border-box;
     display: flex;
     box-sizing: border-box;
+}
+
+.row:hover{
+    border-radius: 3px;
+    background: #eee;
 }
 
 .completado{
@@ -9,7 +15,8 @@
 }
 
 .completado .total{
-    color: red;
+    color: #ddd;
+    text-decoration: line-through;
 }
 
 div{
@@ -44,4 +51,18 @@ div{
     text-align: center;
     box-sizing: border-box;
     padding: 5px 0;
+}
+
+.accion button{
+    border: none;
+    font-size: 12px;
+    background-color: rgb(202, 39, 39);
+    color: white;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.accion button:hover{
+    background-color: darkred;
 }
