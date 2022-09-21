@@ -1,5 +1,6 @@
-url de video en youtube
+url de videos en youtube
 https://www.youtube.com/watch?v=tP42hCXf-Ro&t=2178s
+https://www.youtube.com/watch?v=i-oYrcNtc2s
 PAra qutar error de pwshell
 https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar
 
@@ -30,3 +31,18 @@ con esto se crea una nueva carpeta con la estructura de angular
 Para crear un servicio nuevo para poder ser hijo de algun padre en angular
 ng generate service services/item
 ng g s services/item
+
+Se creo un servidor de pruebas en la carpeta de 1er aplicación y en una carpeta que se llama backend, hay que
+ir a esta carpeta desde consola con cd C:\Users\RamiroQuai\Documents\GitHub\PlanDeEstudio\01.EstudioPersonal\05.Angular\1erAplicacion\ListaCompras\Backend
+
+--Si el servidor ya fue creado solo con estas instrucción, este es nuestro caso
+node server
+http://localhost:3000/Items
+
+--Si el servidor no ha sido creado hay que seguir estas indicaciones
+npm init -y
+npm i express cors uuid
+node server
+http://localhost:3000/Items
+
+

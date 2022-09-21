@@ -1,0 +1,35 @@
+http://localhost:50392/
+
+PAra crear este proyecto se usará una api de tipo crud para poder dar de alta actualizar y eliminar usar el siguiente comando para creaer un servidor 
+npm i -g json-server
+
+hay una pagina para poder bajar materal se llama
+
+https://material.angular.io/
+
+importante que en las rutas se ponga primero los pats existentes y al final el path que no exista para redirigir a la pagina principal
+como se nota en el siguiente ejemplo
+s
+const routes: Routes = [
+  {path:'dominicode', component: DominicodeComponet},
+  {path:'**', redirectTo:'', pathMatch:'full'}
+];
+
+para generar un modulo con la imprtacion autoamti en el modulo principal app.module.ts y las rutas
+
+ng g m pages/products -m=app --route
+
+Hay forma de omitir el archivo test generando ng g c nombre --skip-tests
+
+para generar un servicio
+ng g s {{ruta de donde queremos crearlo}} 
+o 
+ng g service
+ej
+ng g service pages/products/services/products --skip-tests
+
+PARA LEVANTAR EL SERVIDOR DE LA BD 
+
+desde el package.json en serverAPI se pone la ruta que se desea y desde cmd
+
+npm run serverAPI
