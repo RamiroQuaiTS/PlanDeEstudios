@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arreglos</title>
+    <script src="jsFunciones/arreglos.js"></script>
+    <script>
+        var dias = new Array();
+        var meses = [];
+        dias[0] = "Lunes";
+        dias[1] = "Martes";
+        dias[2] = "Miercoles";
+        dias[3] = "Jueves";
+        dias[4] = "Viernes";
+        dias[5] = "Sábado";
+        dias[6] = "Domingo";
+
+        for (var i = 0; i < dias.length; i++) {
+            document.write("Dia " + dias[i] + "<br>");            
+        }
+
+        meses["enero"] = 11;
+        meses["Febrero"]=2323;
+        meses["Marzo"]= 23324;
+        meses["abril"]=234;
+        document.write("<hr>");
+        for (alumnos in meses) {
+            document.write("En el mes de " + alumnos + " hubo " + meses[alumnos] + "<br>");
+        }
+
+        var equipos = new Array("Chivas", "Leon", "Pumas");
+        equipos.push("America");
+
+        for (let i = 0; i < equipos.length; i++) {
+            document.write("el equipo es: " + equipos[i] + "<br>");            
+        }
+
+        document.write("Los equipos en orden alfabetico " + equipos.sort() + "<br>");
+        document.write("Los equipos en orden alfabetico invertido" + equipos.reverse());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
