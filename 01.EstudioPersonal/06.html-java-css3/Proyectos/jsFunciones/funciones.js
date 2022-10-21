@@ -20,3 +20,23 @@ var yz = () => {
     var b=9;
     return a+b;
 }
+
+//Creación de objetos, llenado y uso
+var videojuegos = new Object()
+videojuegos.nombre = "MetalGear"
+videojuegos.genero = "Sigilo"
+videojuegos.cronologia = [1964, 1970, 1974, 1975, 1984, 1995, 1999, 2005, 2007, 2014, 2018]
+videojuegos.consolas = {mgs1: "ps1", mgs2: "ps2", mgs3: "ps2", mgs4: "ps3", mgs5: "ps4"}
+
+document.write("Vamos a hablar del juego" + videojuegos.nombre + " el juego es de tipo "+ videojuegos.genero + " el metal gear solid 1 salio en la consola " + videojuegos.consolas.mgs1 + "<br>");
+
+//Numeros aleatorios
+var juegos = new Array("Mgs", "Sifu", "Fifa", "Moss", "Asseto corsa", "GT7", "hotWheels")
+//Se toma un numero aleatorio
+var numero = Math.random();
+//Numero del 0 al tamaño del arreglo
+numero*=juegos.length;
+//Se trunca con floor
+numero = Math.floor(numero);
+//Se toma el juego que se va a jugar
+document.write("Vamos a jugar el juego: " + juegos[numero+1]);
