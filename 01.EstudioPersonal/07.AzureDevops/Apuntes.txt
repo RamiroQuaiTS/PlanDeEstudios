@@ -1,2 +1,6 @@
 URL 
 https://www.udemy.com/course/azure-devops-de-cero-a-experto/learn/lecture/26034248#overview
+
+Entender que es
+pipelines
+artifacts
