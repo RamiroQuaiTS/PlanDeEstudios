@@ -4,3 +4,7 @@ https://www.udemy.com/course/azure-devops-de-cero-a-experto/learn/lecture/260342
 Entender que es
 pipelines
 artifacts
+
+Se adelanta hasta la tarea 4 de la url
+https://azuredevopslabs.com/labs/azuredevops/agile/#exercise-1-agile-project-management
+La cual ya se guardó en favitos en crusos y en la pestaña de azure
