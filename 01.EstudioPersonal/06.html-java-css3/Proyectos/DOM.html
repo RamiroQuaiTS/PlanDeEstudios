@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+</head>
+<body>
+    <h1>Esta es una pagina html</h1>
+    <p>Las siglas de DOM significan</p>
+    <ul id="lDom">
+        <li>Document</li>
+        <li>Object</li>
+        <li>Model</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    var mList = document.getElementsByTagName("li");
+    document.write("El numero de elementos son: " + mList.length + "<br>");   
+
+    var miDom = document.getElementById("lDom");
+    document.write("El numero de nodos de la lista es: " + miDom.childNodes.length+"<br>");
+
+    document.write("El contentenido del nodo es: "+ miDom.innerHTML+"<br>");
+
+</script>

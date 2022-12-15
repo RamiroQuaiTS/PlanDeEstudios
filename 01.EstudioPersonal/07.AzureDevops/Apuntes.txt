@@ -5,6 +5,7 @@ Entender que es
 pipelines
 artifacts
 
+<<<<<<< HEAD
 WaterFall
 Modelo de cascada es orden sequencial (waterfall)
 	 se centra en lo que pide el cliente, pero al final, puede ser que no es lo que realmente quiere
@@ -23,3 +24,8 @@ bienvenido sean los requisitos cambientes
 entragar sofware que funcione con frecuecia
 Trabajar juntos desrrollores
 Mantener motivado al equipo
+=======
+Se adelanta hasta la tarea 4 de la url
+https://azuredevopslabs.com/labs/azuredevops/agile/#exercise-1-agile-project-management
+La cual ya se guardó en favitos en crusos y en la pestaña de azure
+>>>>>>> 4ea5dd32ae7c53335a3fb411d901d00807f4e81c
