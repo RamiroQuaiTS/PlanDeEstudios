@@ -4,3 +4,22 @@ https://www.udemy.com/course/azure-devops-de-cero-a-experto/learn/lecture/260342
 Entender que es
 pipelines
 artifacts
+
+WaterFall
+Modelo de cascada es orden sequencial (waterfall)
+	 se centra en lo que pide el cliente, pero al final, puede ser que no es lo que realmente quiere
+
+Agile
+mejora continua, para ires adaptando con flexibilidad, el desarrollo favorece a las personas
+hay que colaborar, mostrar avances y poder cambiar al vuelo, ya daily y retrospectivas
+Se separa el ciclo de vida del proyecto en sprint
+Es flexible
+Sigue un enfoque de desarrollo interativo por lo que cada fase puede aparecer mas de uma vez
+se espera que los requisitos cambien y evolucionen
+foco en complir las exigencias del cliente
+
+Satifacer al cliente
+bienvenido sean los requisitos cambientes
+entragar sofware que funcione con frecuecia
+Trabajar juntos desrrollores
+Mantener motivado al equipo
