@@ -1,0 +1,8 @@
+para instalar todo hay que usar
+jdk
+https://www.udemy.com/course/curso-de-java-nivel-basico/
+https://adoptopenjdk.net/
+NOTA: En la instalación marcar todos las opciones que están desactivadas
+
+NetBeans
+https://netbeans.apache.org/
