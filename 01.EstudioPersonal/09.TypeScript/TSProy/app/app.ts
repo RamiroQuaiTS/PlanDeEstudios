@@ -46,3 +46,25 @@ let juegos = ["Play", "Switch", "xbox"];
 juegos.push("steam");
 
 console.log(`${juegos[0]} ${numeros[4]}`);
+
+let tuple : [string , boolean, number] = ["", false, 0];
+console.log(tuple[1]);
+tuple = ["ramiro", true, 36];
+console.log(tuple[0])
+
+enum estado{
+    activo = 1,
+    inactivo = 0,
+    espera = 2,
+    borrado = 3
+}
+
+console.log (estado.inactivo);
+
+let cualquerValor;
+
+cualquerValor = true;
+console.log(cualquerValor);
+cualquerValor = "Ramiro";
+
+console.log(cualquerValor);
