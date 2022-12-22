@@ -1,0 +1,3 @@
+usar visual studio code
+y el nodejs nodejs.org/en/
+instalar typescript typescriptlang.org
