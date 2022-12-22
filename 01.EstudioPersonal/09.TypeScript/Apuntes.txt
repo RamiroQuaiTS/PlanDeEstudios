@@ -1,3 +1,6 @@
 usar visual studio code
 y el nodejs nodejs.org/en/
 instalar typescript typescriptlang.org
+
+Curso udemy
+https://www.udemy.com/course/node-js-apis-poderosas-con-typescript-repository-pattern/
