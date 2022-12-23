@@ -81,3 +81,29 @@ let personaObjeto = {
 };
 let { nombrePO: nombreCompletoObjeto, edadPO, generoPO, interesPO } = personaObjeto;
 console.log(nombreCompletoObjeto);
+let juego = {
+    nombre: "Megal gear",
+    consolas: "Play station",
+    anio: 200
+};
+let carro = {
+    color: "Rojo",
+    marca: "VW",
+    anio: 1992
+};
+let agrupar = Object.assign(Object.assign({}, juego), carro);
+console.log(agrupar);
+function obtenerValor(objecto) {
+    let { nombre, cantidad } = objecto;
+    console.log(nombre);
+    console.log(cantidad);
+}
+let juegoObj = {
+    nombre: "metalgear",
+    //cantidad: 5
+};
+obtenerValor(juegoObj);
+function saludar(nombre, genero = "SG") {
+    console.log("tu nombres es: " + nombre + " y tu genero es: " + genero);
+}
+saludar("Ramiro", "MA");

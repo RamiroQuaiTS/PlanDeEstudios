@@ -37,3 +37,18 @@ let personaObjeto = {
 let {nombrePO:nombreCompletoObjeto, edadPO, generoPO, interesPO} = personaObjeto;
 
 console.log(nombreCompletoObjeto);
+
+let juego = {
+    nombre:"Megal gear",
+    consolas:"Play station",
+    anio:200
+}
+
+let carro = {
+    color:"Rojo",
+    marca:"VW",
+    anio:1992
+}
+
+let agrupar = {...juego, ...carro}
+console.log(agrupar);
