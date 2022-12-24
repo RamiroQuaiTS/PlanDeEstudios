@@ -36,9 +36,9 @@ numeros.push(7);
 let juegos = ["Play", "Switch", "xbox"];
 juegos.push("steam");
 console.log(`${juegos[0]} ${numeros[4]}`);
-let tuple = ["", false, 0];
+let tuple = ["", true, 0];
 console.log(tuple[1]);
-tuple = ["ramiro", true, 36];
+tuple = ["ramiro", false, 36];
 console.log(tuple[0]);
 var estado;
 (function (estado) {
@@ -107,3 +107,75 @@ function saludar(nombre, genero = "SG") {
     console.log("tu nombres es: " + nombre + " y tu genero es: " + genero);
 }
 saludar("Ramiro", "MA");
+class Consola {
+    constructor(_color, _nombre, _empresa, _anio) {
+        this._color = _color;
+        this.nombre = "Play Station 5";
+        this._color = _color;
+        this.nombre = _nombre;
+        this.empresa = _empresa;
+        this.anio = _anio;
+    }
+}
+let consola = new Consola("gris", "Play Station 4", "Sony", 1990);
+console.log(consola);
+class Persona {
+    constructor(_nombre, _apellido, _edad) {
+        this.nombre = _nombre;
+        this.apellido = _apellido;
+        this.edad = _edad;
+    }
+    ObtenerNombre() {
+        return this.nombre;
+    }
+    ImprimirNombre() {
+        return this.nombre;
+    }
+}
+class Empleado extends Persona {
+    constructor(_idEmpleado, _nombre, _apellido, _edad) {
+        super(_nombre, _apellido, _edad);
+        this.idEmpleado = _idEmpleado;
+    }
+}
+class Estudiante extends Persona {
+    constructor(_idEstudiante, _nombre, _apellido, _edad) {
+        super(_nombre, _apellido, _edad);
+        this.idEstudiante = _idEstudiante;
+    }
+}
+let empleado = new Empleado(1, "Ramiro desde clase con variable privada", "Tello", 36);
+console.log(empleado.ImprimirNombre());
+class Cliente {
+    get nombre() {
+        if (this._nombre) {
+            return this._nombre;
+        }
+        return "Valor por defecto";
+    }
+    set nombre(v) {
+        this._nombre = v;
+    }
+    constructor(nombreCliente) {
+        this._nombre = nombreCliente;
+    }
+}
+let cliente = new Cliente();
+console.log(cliente.nombre);
+///Abstracto
+class Animal {
+}
+class Gato extends Animal {
+    Ruido() {
+        console.log("Miau");
+    }
+}
+class Perro extends Animal {
+    Ruido() {
+        console.log("Guau");
+    }
+    brinca() {
+    }
+}
+let perro = new Perro();
+perro.Ruido();

@@ -47,9 +47,9 @@ juegos.push("steam");
 
 console.log(`${juegos[0]} ${numeros[4]}`);
 
-let tuple : [string , boolean, number] = ["", false, 0];
+let tuple : [string , boolean, number] = ["", true, 0];
 console.log(tuple[1]);
-tuple = ["ramiro", true, 36];
+tuple = ["ramiro", false, 36];
 console.log(tuple[0])
 
 enum estado{
