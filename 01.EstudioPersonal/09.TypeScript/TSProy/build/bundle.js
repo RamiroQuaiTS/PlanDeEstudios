@@ -1,4 +1,37 @@
 "use strict";
+var ClienteTS;
+(function (ClienteTS) {
+    function saluda() {
+        return "Hola desde cliente";
+    }
+    ClienteTS.saluda = saluda;
+})(ClienteTS || (ClienteTS = {}));
+class Pais {
+    constructor() {
+    }
+    Ruido() {
+        console.log("Miau");
+    }
+}
+let pais = new Pais();
+pais.Ruido();
+var EmpleadoTS;
+(function (EmpleadoTS) {
+    function saluda() {
+        return "Hola desde empleado";
+    }
+    EmpleadoTS.saluda = saluda;
+})(EmpleadoTS || (EmpleadoTS = {}));
+let prueba = { entero: 25, nombre: "Hola" };
+class Utilidad {
+    Sumar(numUno, numDos) {
+        this.total = numUno + numDos;
+        return this.total;
+    }
+    Restar(numUno, numDos) {
+        return numUno - numDos;
+    }
+}
 console.log("Hola desde app.js aquí se hará un for con una lista");
 let lista = ["Play", "Switch", "xbox"];
 for (const iterator of lista) {
@@ -179,3 +212,9 @@ class Perro extends Animal {
 }
 let perro = new Perro();
 perro.Ruido();
+///<reference path="ClienteNS.ts" />
+///<reference path="EmpleadoNS.ts" />
+let saludo = ClienteTS.saluda();
+console.log(saludo);
+let saludo2 = EmpleadoTS.saluda();
+console.log(saludo2);
