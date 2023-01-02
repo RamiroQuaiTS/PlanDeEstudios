@@ -46,4 +46,5 @@ pais.EnviarMsj = function () {
     console.log("Se manda msj desde la función editada");
 };
 pais.EnviarMsj();
+console.log("hola");
 console.log(pais.nombre);

@@ -25,12 +25,12 @@ function DecoradorPropiedad(esModifcables:boolean){
 class Pais {
     @DecoradorPropiedad(true)
     nombre:string;
+
     constructor(_nombre:string){
         this.nombre = _nombre;
     }    
     
     @DecoradorMetodo(true)
-
     EnviarMsj():void{
         console.log("Enviano mensaje desde función con decorador de método");
     }
@@ -42,4 +42,5 @@ pais.EnviarMsj = function(){
     console.log("Se manda msj desde la función editada");
 }
 pais.EnviarMsj();
+console.log("hola");
 console.log(pais.nombre);
