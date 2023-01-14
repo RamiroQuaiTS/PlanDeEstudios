@@ -73,17 +73,14 @@
 // console.log("El usuario " , usuario?.nombre , " se dio de alta el ", usuario?.fechaAlta)
 
 class Personaje{
-    readonly id: number;
-    nombre: string;
-    private _nivel: number;
-    private _hp: number;
-    rango?: string;
+    rango?: string
+    private static numeroPesonajes:number = 0;
 
-    constructor(id:number, nombre:string, nivel:number, hp:number){
-        this.id = id;
-        this.nombre = nombre;
-        this._nivel = nivel;
-        this._hp = hp;
+    constructor(
+        public readonly id:number, 
+        private nombre:string, 
+        private _nivel:number, 
+        private _hp:number){
     }
 
     subirNivel():void {
@@ -94,9 +91,35 @@ class Personaje{
         this._hp = this._hp + aumentoHP;
     }
 
+    static aumentarPersonaje(){
+        Personaje.numeroPesonajes++
+    }
+
+    get hp(): number{
+        return this._hp
+    }
+
+    static getNumeroPersonajes():number{
+        return Personaje.numeroPesonajes
+    }
+
+    set hp(hpNuevo:number){
+        this._hp += hpNuevo
+    }
+
 }
 
 const personaje = new Personaje(1, "Ramiro", 0, 100);
 personaje.subirNivel()
 personaje.subirHP(100)
-console.log(personaje);
+Personaje.aumentarPersonaje()
+Personaje.aumentarPersonaje()
+Personaje.aumentarPersonaje()
+Personaje.aumentarPersonaje()
+console.log(personaje)
+console.log(personaje.hp)
+personaje.hp = 12 /**Aquí se asigna desde el set no es lo mas recomencdable lo mejor es usar el subirhp */
+console.log(personaje.hp)
+
+const personajeNuevo =  new Personaje(2, "Diego", 10, 100)
+console.log(Personaje.getNumeroPersonajes())
