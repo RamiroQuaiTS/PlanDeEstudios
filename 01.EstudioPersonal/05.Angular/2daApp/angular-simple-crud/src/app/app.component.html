@@ -12,7 +12,7 @@
           class="list-group-item list-group-item-action"
           (click)="AbrirEditar(empleado)"
           [class.active]="empleado == seleccionaEmpleado">
-          <span class="badge badge-primary"> {{empleado.id}} </span> {{empleado.name}} - {{empleado.country}}
+          <span class="badge bg-primary">{{empleado.id}}</span> {{empleado.name}} - {{empleado.country}}
         </li>
       </ul>
       <div class="card mt-4">
@@ -21,20 +21,23 @@
             Agrega empleado
           </div>
           <div class="form-group mt-2">
-            <input type="text" [(ngModel)]="seleccionaEmpleado.name" placeholder="Insertar nombre" class="form-control">
+            <input #nombre type="text" [(ngModel)]="seleccionaEmpleado.name" placeholder="Insertar nombre" class="form-control">
           </div>
           <div class="form-group mt-2">
-            <input type="text" [(ngModel)]="seleccionaEmpleado.country" placeholder="Insertar pais"
+            <input #ciudad type="text" [(ngModel)]="seleccionaEmpleado.country" placeholder="Insertar pais"
               class="form-control">
           </div>
-          <button (click)="AgregarEditar()" class="btn btn-primary mt-2">
+          <button type="button" (click)="AgregarEditar(nombre.value, ciudad.value)" class="btn btn-primary mt-2">
             Submit
           </button>
-          <button 
+          <button type="button"
             *ngIf="seleccionaEmpleado.id !== 0"
             class="btn btn-danger mt-2"
             (click)="Borrar()">            
             Borrar
+          </button>
+          <button type="button" *ngIf="seleccionaEmpleado.id !== 0" (click)="AgregarEditar()" class="btn btn-link mt-2">
+            Limpiar
           </button>
         </div>
       </div>

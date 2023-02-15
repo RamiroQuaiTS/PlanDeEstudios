@@ -17,17 +17,28 @@ export class AppComponent {
 
   seleccionaEmpleado: Empleado = new Empleado();
 
-  AgregarEditar(){
-    if (this.seleccionaEmpleado.id === 0) {
-      this.seleccionaEmpleado.id = this.empleadoArreglo.length + 1;
-      this.empleadoArreglo.push(this.seleccionaEmpleado);
+  AgregarEditar(nombre:string = "", ciudad:string = ""){
+    if (this.seleccionaEmpleado.id === 0 ) {
+      if (nombre.length <= 0 || ciudad.length <= 0) {
+        alert("El nombre y la ciudad en obligatoria!!!!");
+      }
+      else{
+        this.seleccionaEmpleado.id = this.empleadoArreglo.length + 1;
+        this.empleadoArreglo.push(this.seleccionaEmpleado);  
+        this.Limpiar();      
+      }       
     }
-    this.seleccionaEmpleado = new Empleado();  
-    
+    else{
+      this.Limpiar(); 
+    }  
   }
 
   AbrirEditar(empleado: Empleado){
     this.seleccionaEmpleado = empleado;
+  }
+  Limpiar(){
+    this.seleccionaEmpleado = new Empleado();  
+    
   }
 
   Borrar(){
