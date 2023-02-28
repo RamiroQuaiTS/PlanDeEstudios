@@ -1,4 +1,4 @@
-Git es una repositorio distribuido esto quiere decir que todos tiene el codigo en su máquina
+﻿Git es una repositorio distribuido esto quiere decir que todos tiene el codigo en su máquina
 Comandos :
 git init - para crear y para que git pueda manejar este repositorio crea un archivo .git
 vim .gitignore - genera un archivo gitignore y dentro de este se puede agregar todo lo que no se quiera subir a git
@@ -27,7 +27,7 @@ con esto nos ponemos en el repositorio debería de ser algo asi
 git remote add origin https://github.com/RamiroQuaiTS/ApuntesGit.git
 y para finalizar usar el comando 
 git push origin master
-
+-------------------
 Creación de Ramas (Branch)
 esto sirve para crear ramas antes de trabjar en la master para esto hay que crear una arama con el siguiente comando
 git branch NuevaRama {Aqui va el nombre de la rama en lugar de NuevaRama}

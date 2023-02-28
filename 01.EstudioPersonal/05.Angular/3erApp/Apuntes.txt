@@ -1,2 +1,36 @@
 Se creará nueva aplicación con el ejemplo que se menciana en este enlace
 https://www.youtube.com/watch?v=i-oYrcNtc2s&t=10s
+
+Su punto fuerte es que esta creado con typescript y también se codifica en typescript
+también su punto fuerte es la creación de SPA (Single page aplicatión) todo se genera en una sola página
+
+Angular CLI -  permite crear e inicializar proyectos
+npm install -g @angular/cli
+ng versión (para saber que versión tengo)
+
+Para generar una nueva aplicación de angular desde la consula hay que agregar el siguiente comando
+ng new NombreAplicacion
+
+La estructura que mas se usará es la de app
+
+Para generar un nuevo componente
+ng generate component carpeta/componente
+ng g c carpeta/componente
+
+Angular.io (hay que leer la documetnacion)
+
+
+Hoy se aprendio a crear un componente ya con las rutas establecidas
+ng g c pages/product -m=app --route product
+
+también se aprendio loq ue son la rutas y su funcionamiento esto para que la ruta en cuestión que vaya en el path se vea dentro de la pagina 
+
+0:59:53 Solución al Reto crear nuevo componente Product
+
+Se aprendio a crear y pasar info de un hijo a un padre con input y output
+
+1:49:23 Creamos el ShoppingCartService 
+
+se aprendio a crear observables y usar su valor
+
+2:14:50 ¿Qué es el Change Detection en Angular?
