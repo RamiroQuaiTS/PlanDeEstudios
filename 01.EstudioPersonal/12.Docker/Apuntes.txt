@@ -1,0 +1,21 @@
+Para obtener una imagen se usa 
+docker pull mongo (en este caso se trae la imagen de mongo)
+docker images (se trae todas las imagenes)
+para borrar la imagen 
+docker image mongo (mongo es el nombre de la imagen)
+
+Para crear un contenedor se usa
+docker create mongo (le da un nombre generico)
+docker create --name mongo_container mongo (le da el nombre de mongo_container sobre la imagen de mongo)
+
+Es bueno especificar el puerto y para esto se usa
+docker create -p27017:27017 --name mongo_container mongo
+
+para correr 
+docker run mongo_container
+
+hay un comando mas rapido que busca la imagen y de ser necesario la crea y luego genera el contenedor y lo ejecugta
+docker run --name mongo_container -p27017:27017 -d mongo
+
+con docker ps se ven los contenedores en ejecución 
+con docker ps-a se ven todos los contenedores aunque no estén en ejecución
