@@ -1,22 +1,22 @@
 version: "3.9"
 services:
-  chanchito:
+  lista_animales:
     build: .
     ports:
       - "3000:3000"
     links:
-      - monguito
-  monguito:
+      - mongo_container
+  mongo_container:
     image: mongo
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=nico
-      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_ROOT_USERNAME=ramiro
+      - MONGO_INITDB_ROOT_PASSWORD=contrasenia
     volumes:
-      - mongo-data:/data/db
+      - mongo-data-volume:/data/db
       # mysql -> /var/lib/mysql
       # postgres -> /var/lib/postgresql/data
 
 volumes:
-  mongo-data:
+  mongo-data-volume:

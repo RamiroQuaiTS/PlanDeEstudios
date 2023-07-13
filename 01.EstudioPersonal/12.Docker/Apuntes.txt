@@ -19,3 +19,7 @@ docker run --name mongo_container -p27017:27017 -d mongo
 
 con docker ps se ven los contenedores en ejecución 
 con docker ps-a se ven todos los contenedores aunque no estén en ejecución
+
+ya que se tiene el dockerfile hay que generar una red local para poder comunicar la bd con la aplicación
+docker network create mired
+
